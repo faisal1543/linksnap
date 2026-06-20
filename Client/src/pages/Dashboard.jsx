@@ -217,7 +217,7 @@ export default function Dashboard({ token, onLogout }) {
                   <div style={{ display: 'flex', gap: '6px', flexShrink: 0 }}>
                     <button onClick={() => openStats(link)} style={btnStyle(panel?.id === link.id && panel?.type === 'stats')}>Stats</button>
                     <button onClick={() => openQr(link)} style={btnStyle(panel?.id === link.id && panel?.type === 'qr')}>QR</button>
-                    <CopyButton text={`http://localhost:5000/${link.short_code}`} />
+                    <CopyButton text={`${API}/${link.short_code}`} />
                     <button onClick={() => deleteLink(link.id)} style={{ background: 'none', border: '0.5px solid var(--border)', borderRadius: '6px', padding: '5px 8px', fontSize: '11px', color: 'var(--muted)', cursor: 'pointer', transition: 'all 0.2s' }}
                       onMouseEnter={e => { e.target.style.borderColor = 'var(--danger)'; e.target.style.color = 'var(--danger)' }}
                       onMouseLeave={e => { e.target.style.borderColor = 'var(--border)'; e.target.style.color = 'var(--muted)' }}>✕</button>
