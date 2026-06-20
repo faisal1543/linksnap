@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
-import './index.css'
+
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'))
