@@ -12,7 +12,7 @@ function Login({ onLogin, onSwitch }) {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.post('https://linksnap-production-20d7.up.railway.app/api/auth/register', { email, password })
+      const res = await axios.post('https://linksnap-production-20d7.up.railway.app/api/auth/login', { email, password })
       onLogin(res.data.token)
     } catch {
       setError('Invalid email or password')
