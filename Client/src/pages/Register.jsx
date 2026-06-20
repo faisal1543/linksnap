@@ -14,7 +14,7 @@ function Register({ onSwitch }) {
     setError('')
     setMessage('')
     try {
-      await axios.post('https://linksnap-production-20d7.up.railway.app', { email, password })
+      await axios.post('https://linksnap-production-20d7.up.railway.app/api/auth/register', { email, password })
       setMessage('Account created! You can now sign in.')
       setLoading(false)
     } catch {
