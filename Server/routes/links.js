@@ -92,7 +92,7 @@ router.get('/:id/qr', authenticate, async (req, res) => {
     );
     if (rows.length === 0) return res.status(404).json({ error: 'Link not found' });
 
-    const short_url = `http://localhost:5000/${rows[0].short_code}`;
+    const short_url = `${process.env.BASE_URL || 'https://linksnap-production-20d7.up.railway.app'}/${rows[0].short_code}`;
     const qr = await QRCode.toDataURL(short_url);
     res.json({ qr });
   } catch (err) {
