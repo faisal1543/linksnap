@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
 
-const API = 'http://localhost:5000'
+const API = 'https://linksnap-production-20d7.up.railway.app'
 
 const timeAgo = (date) => {
   const diff = Date.now() - new Date(date)
