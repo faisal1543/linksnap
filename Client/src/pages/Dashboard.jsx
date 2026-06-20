@@ -208,8 +208,8 @@ export default function Dashboard({ token, onLogout }) {
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: '13px', fontWeight: '500', color: 'var(--accent)' }}>
                       <a href={`${API}/${link.short_code}`} target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
-                        localhost:5000/{link.short_code}
-                      </a>
+  {API.replace('https://', '')}/{link.short_code}
+</a>
                     </div>
                     <div style={{ fontSize: '11px', color: 'var(--muted)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginTop: '2px' }}>{link.original_url}</div>
                   </div>
