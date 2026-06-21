@@ -29,7 +29,7 @@ router.post('/', authenticate, async (req, res) => {
       [user_id, original_url, short_code, custom_alias || null, expires_at || null]
     );
 
-    res.json({ short_url: `http://localhost:5000/${short_code}`, short_code });
+    res.json({ short_url: `${process.env.BASE_URL || 'https://linksnap-production-20d7.up.railway.app'}/${short_code}`, short_code });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
